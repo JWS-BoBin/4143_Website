@@ -113,7 +113,7 @@
                     <h3 class="h5 mb-4">Photo Gallery</h3>
                     <div class="row g-3" id="gallery-container">
                         <div class="col-md-4 col-sm-6">
-                            <img src="images/Guthrie_Portrait.png" 
+                            <img src="../images/Guthrie_Portrait.png" 
                                 alt="Woody Guthrie playing guitar with 'This Machine Kills Fascists' sticker" 
                                 class="img-fluid rounded shadow gallery-image"
                                 data-bs-toggle="modal" 
@@ -123,7 +123,7 @@
                             <p class="text-muted mt-2 small">(Aumuller, 1943)</p>
                         </div>
                         <div class="col-md-4 col-sm-6">
-                            <img src="images/MLK_WeShallOvercome.jpg" 
+                            <img src="../images/MLK_WeShallOvercome.jpg" 
                                 alt="Dr. Martin Luther King Jr. addressing a rally" 
                                 class="img-fluid rounded shadow gallery-image"
                                 data-bs-toggle="modal" 
@@ -132,7 +132,7 @@
                                 data-bs-caption="Raia, A. (1965, June 12). Lakeview, N.Y.: Dr. Martin Luther King, jr. addresses a rally in Lakeview, New York during a tour of Long Island [Photograph]. Newsday RM/Getty Images. https://www.gettyimages.com/detail/news-photo/lakeview-n-y-dr-martin-luther-king-jr-addresses-a-rally-in-news-photo/1069257060">(Raia, 1965)</p>
                         </div>
                         <div class="col-md-4 col-sm-6">
-                            <img src="images/Belafonte_MoW.gif" 
+                            <img src="../images/Belafonte_MoW.gif" 
                                 alt="Sidney Poitier, Harry Belafonte, and Charlton Heston at the March on Washington" 
                                 class="img-fluid rounded shadow gallery-image"
                                 data-bs-toggle="modal" 
@@ -142,7 +142,7 @@
                             <p class="text-muted mt-2 small">(Scherman, 1963a)</p>
                         </div>
                         <div class="col-md-4 col-sm-6">
-                            <img src="images/BaezDylan_MoW.gif" 
+                            <img src="../images/BaezDylan_MoW.gif" 
                                 alt="Joan Baez and Bob Dylan singing at the March on Washington" 
                                 class="img-fluid rounded shadow gallery-image"
                                 data-bs-toggle="modal" 
@@ -152,7 +152,7 @@
                             <p class="text-muted mt-2 small">(Scherman, 1963b)</p>
                         </div>
                         <div class="col-md-4 col-sm-6">
-                            <img src="images/Odetta_MoW.gif" 
+                            <img src="../images/Odetta_MoW.gif" 
                                 alt="Odetta singing at the March on Washington" 
                                 class="img-fluid rounded shadow gallery-image"
                                 data-bs-toggle="modal" 
@@ -161,7 +161,7 @@
                                 data-bs-caption="U.S. Information Agency. Press and Publications Service. (1963a, August 28). Civil Rights March on Washington, D.C. [Entertainment: Vocalist Odetta] [Photograph]. U.S. National Archives and Records Administration. Record Group 306, Records of the U.S. Information Agency. NAID 542020. https://catalog.archives.gov/id/542020">(U.S. Information Agency, 1963a)</p>
                         </div>
                         <div class="col-md-4 col-sm-6">
-                            <img src="images/PeterPaulMary_MoW.gif" 
+                            <img src="../images/PeterPaulMary_MoW.gif" 
                                 alt="Peter, Paul and Mary singing at the March on Washington" 
                                 class="img-fluid rounded shadow gallery-image"
                                 data-bs-toggle="modal" 
@@ -171,7 +171,7 @@
                             <p class="text-muted mt-2 small">(U.S. Information Agency, 1963b)</p>
                         </div>
                         <div class="col-md-4 col-sm-6">
-                            <img src="images/FourSingers_MoW.gif" 
+                            <img src="../images/FourSingers_MoW.gif" 
                                 alt="Four young marchers singing at the March on Washington" 
                                 class="img-fluid rounded shadow gallery-image"
                                 data-bs-toggle="modal" 
@@ -320,7 +320,7 @@
             
             modal.addEventListener('show.bs.modal', function(event) {
                 const button = event.relatedTarget;
-                const imageSrc = 'images/' + button.getAttribute('data-bs-src'); // Add images/ path
+                const imageSrc = '../images/' + button.getAttribute('data-bs-src'); // Add images/ path
                 const caption = button.getAttribute('data-bs-caption');
                 const altText = button.getAttribute('alt');
                 
