@@ -1,29 +1,45 @@
 // js/include.js
 document.addEventListener('DOMContentLoaded', function() {
-    // Get the current path and determine the correct location for navbar.html
-    const isInResourcesFolder = window.location.pathname.includes('/resources/');
-    const navbarPath = isInResourcesFolder ? '../navbar.html' : 'navbar.html';
+    // Try multiple possible locations for navbar
+    const possibleNavbarPaths = [
+        '/navbar.html',
+        'navbar.html',
+        '../navbar.html',
+        '/classactivities/navbar.html',
+        'classactivities/navbar.html'
+    ];
     
-    // Include navbar
-    fetch(navbarPath)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navbar-container').innerHTML = data;
-            
-            // Re-initialize Bootstrap dropdowns if needed
-            var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
-            var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
-                return new bootstrap.Dropdown(dropdownToggleEl)
+    // Function to try loading from a path
+    function tryLoadNavbar(paths, index = 0) {
+        if (index >= paths.length) {
+            console.error('Could not find navbar at any location');
+            return;
+        }
+        
+        fetch(paths[index])
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Not found');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+                
+                // Re-initialize Bootstrap dropdowns
+                var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+                var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+                    return new bootstrap.Dropdown(dropdownToggleEl)
+                });
+                
+                console.log('Navbar loaded from:', paths[index]);
+            })
+            .catch(error => {
+                console.log(`Trying next location... (failed: ${paths[index]})`);
+                tryLoadNavbar(paths, index + 1);
             });
-        })
-        .catch(error => console.error('Error loading navbar:', error));
+    }
     
-    // Optionally include footer too with the same logic
-    const footerPath = isInResourcesFolder ? '../footer.html' : 'footer.html';
-    fetch(footerPath)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-container').innerHTML = data;
-        })
-        .catch(error => console.error('Error loading footer:', error));
+    // Start trying to load the navbar
+    tryLoadNavbar(possibleNavbarPaths);
 });
