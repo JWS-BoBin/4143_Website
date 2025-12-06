@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Source Name | Folk Music Revival Project</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Page Specific Styles -->
+    <style>
+        .source-image {
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .apa-reference {
+            background-color: #f8f9fa;
+            border-left: 4px solid #6c757d;
+            padding: 1.5rem;
+            font-family: 'Merriweather', serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .section-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Merriweather', serif;
+        }
+        .activity-btn {
+            transition: all 0.3s ease;
+            min-width: 140px;
+        }
+        .activity-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+            .activity-btn {
+        transition: all 0.3s ease;
+        min-width: 140px;
+    }
+    .activity-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .btn-xl {
+        padding: 1rem 2rem;
+        font-size: 1.25rem;
+    }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar-container"></div>
+    
+    <!-- Main Content Container -->
+    <main class="container my-5">
+        <!-- Header Section -->
+        <header class="mb-5">
+            <div class="row">
+                <!-- Title row -->
+                <div class="col-12">
+                    <h1 class="display-4 fw-bold text-primary mb-3" id="source-title">Hootenanny
+                    </h1>
+                </div>
+                
+                 <!-- Applied Resources Section - Simpler Version -->
+                <section class="mt-5 pt-4">
+                    <h3 class="h4 mb-4 text-center">
+                        <i class="fas fa-tasks me-2"></i>Applied Resources
+                    </h3>
+    
+                    <!-- Main Resource -->
+                    <div class="text-center mb-5">
+                        <a href="#" class="btn btn-primary btn-lg px-5 py-3 activity-btn fs-5 fw-bold">
+                            <i class="fas fa-graduation-cap me-2"></i>
+                            Playlist
+                        </a>
+                        <p class="text-muted mt-2 small">The main resource for this activity</p>
+                    </div>
+                    
+                    <!-- Supporting Resources -->
+                    <div class="text-center">
+                        <h5 class="text-muted mb-3">Additional Resources</h5>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <a href="#" class="btn btn-lg btn-outline-success activity-btn">
+                                <i class="fas fa-comments me-2"></i>
+                                Discussion Guide
+                            </a>
+                            <a href="#" class="btn btn-lg btn-outline-info activity-btn">
+                                <i class="fas fa-chart-bar me-2"></i>
+                                Analysis Worksheet
+                            </a>
+                        </div>
+                    </div>
+                
+                    <p class="text-muted text-center mt-4">These resources will help you engage more deeply with this source material.</p>
+                </section>
+            </div>
+        </header>
+        
+         <!-- Content Sections -->
+        <div class="row">
+            <div class="col-12">
+
+                <!-- Summary Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-file-alt me-2"></i>Summary
+                    </h2>
+                    <div class="read-more-section" id="summary-section">
+                        <div id="summary-content">
+                            <p>A hottenanny is a fun, farily informal musical event connected to folk music.</p>
+                            <p>This can be treated as part talent show, part dance, part sing-along. To prepare, the class selects a shortlist of folk songs. A "request board" can gather song ideas. A collection of  instruments, if available, should be included (tambourines, shakers, etc). An optional, low-pressure sign-up sheet allows students to volunteer for special roles, like performing a short verse, leading a dance, or performing a talent.</p>
+                            <p>The hootenanny itself flows through communal activities, which could include: sing-alongs, a supportive "talent sprouts" segment for brief student performances, and an active folk dance or parade. The goal is to create a living memory of music made by and for the community, perfectly embodying the spirit of folk music.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="summary-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+                
+                <!-- Critical Analysis Section with Read More -->
+                <section class="mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-search me-2"></i>Critical Analysis
+                    </h2>
+                    <div class="read-more-section" id="analysis-section">
+                        <div id="critical-analysis-content">
+                            <h5>Joy as Resistance</h5>
+                                <p>Much like traditional hootenannys, this is a joyous event. However, making sure to include the ethos of folk--helping one another, acknowlging the troubles in the world--should be incorporated.</p>
+                            <h5>Dramatization</h5>
+                                <p>Class parties are fairly common, so incorporating elements from a folk music unit is acceptable. Mind should be taken into what songs, activties and talents are ultimately chosen.</p>
+                        </div>
+                        <div class="read-more-fade"></div>
+                    </div>
+                    <button class="read-more-btn" data-target="analysis-section">
+                        <span>Read More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+<div id="footer-container"></div>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Your Custom JS -->
+    <script src="../js/script.js"></script>
+    <script src="../js/include.js"></script>
+    <script src="../js/readmore.js"></script>
+    
+    <!-- Page Specific Script -->
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Placeholder for dynamic content loading
+        // You can replace this with your actual data loading logic
+        console.log('Source template loaded');
+        
+        // Example of how you might populate this template dynamically
+        /*
+        const sourceData = {
+            title: "Source Title",
+            apa: "Full APA reference...",
+            image: "path/to/image.jpg",
+            caption: "Image description",
+            summary: "Summary text...",
+            analysis: "Critical analysis text..."
+        };
+        
+        document.getElementById('source-title').textContent = sourceData.title;
+        document.getElementById('apa-reference').textContent = sourceData.apa;
+        // etc.
+        */
+    </script>
+</body>
+</html>
