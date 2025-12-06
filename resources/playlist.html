@@ -63,64 +63,52 @@
             <div class="row">
                 <!-- Title row -->
                 <div class="col-12">
-                    <h1 class="display-4 fw-bold text-primary mb-3" id="source-title">Folk Bios</h1>
+                    <h1 class="display-4 fw-bold text-primary mb-3" id="source-title">Playlist</h1>
                 </div>
                 
                 <!-- APA Reference row -->
                 <div class="col-12 mb-4">
                     <div class="apa-reference">
                         <p id="apa-reference">
-                            Dicaire, D. (2010). <em>The early years of folk music.</em> McFarland & Company. 
-                        </p>
                         <p>
-                            Dicaire, D. (2011). <em>The folk music revival, 1958-1970.</em> McFarland & Company.
+                            Schimmer, J. (n.d.). <em>Folk Music Revival</em> [Spotify playlist]. Spotify. Retrieved from https://open.spotify.com/playlist/3ofsb1cZp22w31JUzUeqav
                         </p>
                     </div>
                 </div>
-                
-                <!-- Image row - Two Pictures -->
-                <div class="col-12">
-                    <div class="d-flex flex-nowrap align-items-center justify-content-center py-3 overflow-auto">
-                        <!-- Container for both images with horizontal scrolling on very small screens -->
-                        <div class="d-flex flex-row gap-3" style="min-width: min-content;">
-                            <!-- First Image -->
-                            <div class="text-center flex-shrink-0" style="width: 45%; min-width: 200px;">
-                                <img src="../images/TheEarlyYearsOfFolkMusic.webp" 
-                                    alt="Description of first image" 
-                                    class="img-fluid rounded shadow"
-                                    style="max-height: 500px; width: 100%; object-fit: cover;"
-                                    id="source-image-1">
-                                
-                            </div>
-                            
-                            <!-- Second Image -->
-                            <div class="text-center flex-shrink-0" style="width: 45%; min-width: 200px;">
-                                <img src="../images/TheFolkMusicRevival.webp" 
-                                    alt="Description of second image" 
-                                    class="img-fluid rounded shadow"
-                                    style="max-height: 500px; width: 100%; object-fit: cover;"
-                                    id="source-image-2">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </header>
         
-        <!-- Content Sections -->
+         <!-- Content Sections -->
         <div class="row">
             <div class="col-12">
+
+                <!-- Playlist Loading Indicator -->
+                <div id="playlist-loading" class="text-center bg-dark rounded p-5 mb-4" style="min-height: 420px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <div class="spinner-border text-success mb-3" style="width: 3rem; height: 3rem;" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <h4 class="text-white mb-2">Loading Playlist</h4>
+                    <p class="text-light mb-4">Fetching music from Spotify...</p>
+                </div>
+
+                <!-- Spotify iframe -->
+                <iframe data-testid="embed-iframe" style="border-radius:12px; opacity: 0; transition: opacity 0.5s ease;" 
+                        src="https://open.spotify.com/embed/playlist/3ofsb1cZp22w31JUzUeqav?utm_source=generator&theme=0" 
+                        width="100%" height="500" frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy"
+                        onload="hideSpotifyLoading()"
+                        id="spotify-iframe">
+                </iframe>
+
                 <!-- Why This Section with Read More -->
                 <section class="mb-5">
                     <h2 class="section-title">
                         <i class="fas fa-question-circle me-2"></i>Why This Source
                     </h2>
                     <div class="read-more-section" id="whythis-section">
-                        <div id="whythis-content">
-                            <p>Dave Dicaire's books, <em>The early years of folk music</em> and <em>The folk music revival, 1958-1970</em>, provide wonderful short profiles on many folk musicians and otehr notable figures in folk music revival.</p>
-                            
-                            <p>Written by music enthusiast David Dicaire, these works provide well-researched profiles on many performers and a handful of other influential figures in folk music. They offer a great way to diversify and widen who is discussed in the study of folk music.</p>
+                        <div id="whythis-content">                            
+                            <p>If we're going to talk about music, let's have a playlist!</p>
                         </div>
                         <div class="read-more-fade"></div>
                     </div>
@@ -137,25 +125,9 @@
                     </h2>
                     <div class="read-more-section" id="summary-section">
                         <div id="summary-content">
-                            <p>Written by music enthusiast David Dicaire.These comprehensive references profile numerous folk musicians from various backgrounds and eras. A notable strength is the inclusion of international folk singers, expanding the typical scope of folk music discussion beyond American and British traditions.</p>
-                            
-                            <p>Examples of profiles:</p>
-
-                            <!-- Bootstrap-compliant image grid -->
-                            <div class="row mt-3">
-                                <div class="col-md-6 mb-3">
-                                    <img src="../images/FolkAroundTheWorld.png" 
-                                        class="img-fluid rounded shadow-sm" 
-                                        alt="Book cover: Folk Around the World by David Dicaire">
-                                        <p class="text-muted mt-2 small">(Dicaire, 2010)</p>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <img src="../images/ThePoliticalFolk.png" 
-                                        class="img-fluid rounded shadow-sm" 
-                                        alt="Book cover: The Political Folk by David Dicaire">
-                                        <p class="text-muted mt-2 small">(Dicaire, 2011)</p>
-                                </div>
-                            </div>
+                            <p>A playlist of (mostly) folk music that is (mostly) politically inclined and (mostly) from the 1940s through the 1960s. Mostly.</p>
+                            <p>All kidding aside, this playlist is intended to be accommodating and evolving. I will cite specific songs used in other resources, but given the breadth of possible songs, I have chosen to cite the entire Spotify playlist here.</p>
+                            <p>Songs can be added as appropriate for a given class, especially for windows and mirrors.</p>
                         </div>
                         <div class="read-more-fade"></div>
                     </div>
@@ -172,11 +144,20 @@
                     </h2>
                     <div class="read-more-section" id="analysis-section">
                         <div id="critical-analysis-content">
-                            <h5>Windows & Mirrors</h5> 
-                            <p>Allows students to read about a wide range of folk musicians, many of which come from different backgrounds, some of which can come from their own unique backgrounds.</p>
+                            <h5>Omitted voices/stories/perspectives</h5>
+                            <p>This playlist currently centers American artists and songs. If students come from cultures with different folk song lineage, they should be added.</p>
 
-                            <h5>Omitted Stories</h5> 
-                            <p>The books bring to the fore many singers that may not be known to a wider audience, allowing these artists to reclaim their position in the history of folk and culture.</p>                
+                            <h5>Windows and Mirrors</h5>
+                            <p>This provides an opportunity to allow students to find folk from their families' cultures as well as see the American folk tradition.</p>
+
+                            <h5>Link from past to present</h5>
+                            <p>Adding contemporary songs should always be welcome.</p>
+
+                            <h5>Solidarity</h5>
+                            <p>Folk music built collective identity around shared struggles. Singing together at rallies or picket lines was an act of unity.</p>
+
+                            <h5>Power</h5>
+                            <p>The playlist showcases music as a tool of cultural power. It gave a voice to the marginalized, challenged dominant narratives, and mobilized public opinion around social and political issues.</p>
                         </div>
                         <div class="read-more-fade"></div>
                     </div>
@@ -228,21 +209,27 @@
         // You can replace this with your actual data loading logic
         console.log('Source template loaded');
         
-        // Example of how you might populate this template dynamically
-        /*
-        const sourceData = {
-            title: "Source Title",
-            apa: "Full APA reference...",
-            image: "path/to/image.jpg",
-            caption: "Image description",
-            summary: "Summary text...",
-            analysis: "Critical analysis text..."
-        };
-        
-        document.getElementById('source-title').textContent = sourceData.title;
-        document.getElementById('apa-reference').textContent = sourceData.apa;
-        // etc.
-        */
+        function hideSpotifyLoading() {
+            const loadingEl = document.getElementById('playlist-loading');
+            const iframe = document.getElementById('spotify-iframe');
+            
+            if (loadingEl) {
+                loadingEl.style.display = 'none';
+            }
+            
+            if (iframe) {
+                iframe.style.opacity = '1';
+                iframe.style.display = 'block';
+            }
+        }
+
+        // Fallback: hide loading indicator after 10 seconds max
+        setTimeout(() => {
+            const loadingEl = document.getElementById('playlist-loading');
+            if (loadingEl && loadingEl.style.display !== 'none') {
+                hideSpotifyLoading();
+            }
+        }, 10000);
     </script>
 </body>
 </html>
