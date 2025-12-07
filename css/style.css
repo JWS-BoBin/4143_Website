@@ -9,8 +9,8 @@
     --primary-dark: #2c5530;    /* Forest green */
     --primary-light: #8a9a5b;   /* Sage green */
     --accent-warm: #c46d5e;     /* Terra cotta */
-    --accent-gold: #d4a574;     /* Warm gold */
-    --neutral-light: #f5f1e6;   /* Cream */
+    --accent-gold: lab(70.97% 11.04 32.5);     /* Warm gold */
+    --neutral-light: lab(95.18% -0.54 5.77);   /* Cream */
     --neutral-dark: #3a3a3a;    /* Charcoal */
     --neutral-medium: #6c757d;  /* Bootstrap secondary */
     
