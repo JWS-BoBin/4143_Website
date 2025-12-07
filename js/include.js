@@ -12,6 +12,7 @@ function loadNavbar() {
         '/navbar.html',
         'navbar.html',
         '../navbar.html',
+        '4143_website/navbar.html',
         '/classactivities/navbar.html',
         'classactivities/navbar.html'
     ];
@@ -57,6 +58,7 @@ function loadFooter() {
         '/footer.html',
         'footer.html',
         '../footer.html',
+        '4143_website/footer.html'
         '/classactivities/footer.html',
         'classactivities/footer.html'
     ];
