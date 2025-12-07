@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Source Name | Folk Music Revival Project</title>
+    <title>Broadside | Folk Music Revival Project</title>
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -49,6 +49,10 @@
         .activity-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .btn-xl {
+            padding: 1rem 2rem;
+            font-size: 1.25rem;
         }
     </style>
 </head>
@@ -120,7 +124,7 @@
                     </h2>
                     <div class="read-more-section" id="whythis-section">
                         <div id="whythis-content">
-                            <p>Founded by Agnes Cunninham and Gordon Friesen in 1962, Broadside was a magazine that covered the folk revival. (Dicaire,  2011)</p>
+                            <p>Founded by Agnes Cunningham and Gordon Friesen in 1962, Broadside was a magazine that covered the folk revival. (Dicaire,  2011)</p>
                             
                             <p><em>Broadside</em> is an amazing primary source that provides contemporary context, songs and plenty of options for class interaction.</p>
             
@@ -181,31 +185,44 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                 </section>
-                
-                 <!-- Activities Section -->
-                <section class="mt-5 pt-4 border-top">
-                    <h3 class="h4 mb-4 text-center">
-                        <i class="fas fa-tasks me-2"></i>Classroom Activities
-                    </h3>
-                    <div class="d-flex flex-wrap justify-content-center gap-3">
-                        <a href="#" class="btn btn-lg btn-outline-primary activity-btn">
-                            <i class="fas fa-pencil-alt me-2"></i>Activity 1
-                        </a>
-                        <a href="#" class="btn btn-lg btn-outline-success activity-btn">
-                            <i class="fas fa-comments me-2"></i>Activity 2
-                        </a>
-                        <a href="#" class="btn btn-lg btn-outline-info activity-btn">
-                            <i class="fas fa-chart-bar me-2"></i>Activity 3
-                        </a>
+
+
+                <!-- Classroom Section -->
+                <section class="mt-5 pt-5 border-top">
+                    <!-- Classroom Header -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <h2 class="display-6 fw-bold mb-3" style="color: #2c5530;">
+                                <i class="fas fa-book-open me-2"></i>Broad-zines
+                            </h2>
+                            <p class="text-muted mt-2 small">Class activity</p>
+                        </div>
                     </div>
-                    <p class="text-muted text-center mt-4">These activities will help you engage more deeply with this source material.</p>
+
+                    <!-- Classroom Summary Section -->
+                    <section class="mb-5">
+                        <h3 class="section-title">
+                            <i class="fas fa-file-alt me-2"></i>Summary
+                        </h3>
+                        <div class="read-more-section" id="broadzines-summary-section">
+                            <div id="broadzines-summary-content">
+                                <p>Combining the ideas and style of zines with Broadside, these Broad-zines offer a creative approach to engaging with the folk music revival material.</p>
+                                <p>Students could write poems (or music if they have the skillset), draw cartoons and insert news articles they find interesting and relevant.</p>
+                            </div>
+                            <div class="read-more-fade"></div>
+                        </div>
+                        <button class="read-more-btn" data-target="broadzines-summary-section">
+                            <span>Read More</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </section>
                 </section>
             </div>
         </div>
     </main>
     
     <!-- Footer -->
-<div id="footer-container"></div>
+    <div id="footer-container"></div>
     
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -232,7 +249,7 @@
             image: "path/to/image.jpg",
             caption: "Image description",
             summary: "Summary text...",
-            analysis: "Critical analysis text..."
+            analysis: "Critical analysis text...."
         };
         
         document.getElementById('source-title').textContent = sourceData.title;
