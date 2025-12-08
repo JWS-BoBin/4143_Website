@@ -41,6 +41,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-top: 60px;
 }
 
 /* Ensure content pushes footer down */
