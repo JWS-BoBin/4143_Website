@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     loadFooter();
 });
 
-// Updated loadNavbar function
 function loadNavbar() {
     const possibleNavbarPaths = [
         '/navbar.html',
@@ -32,12 +31,6 @@ function loadNavbar() {
                 return response.text();
             })
             .then(data => {
-                // Get the base path for the site
-                const basePath = getBasePath();
-                
-                // Update links in navbar to use correct base path
-                data = updateNavbarLinks(data, basePath);
-                
                 document.getElementById('navbar-container').innerHTML = data;
                 
                 // Re-initialize Bootstrap dropdowns
@@ -47,7 +40,6 @@ function loadNavbar() {
                 });
                 
                 console.log('Navbar loaded from:', paths[index]);
-                console.log('Base path set to:', basePath);
                 
                 // Also initialize navbar toggle functionality
                 initializeNavbar();
@@ -59,51 +51,6 @@ function loadNavbar() {
     }
     
     tryLoadNavbar(possibleNavbarPaths);
-}
-
-function getBasePath() {
-    // Get the current URL path
-    const currentPath = window.location.pathname;
-    
-    // If we're in a subdirectory (like /4143_Website/), use that as base
-    if (currentPath.includes('4143_Website')) {
-        return '/4143_Website/';
-    } else if (currentPath.includes('classactivities')) {
-        return '/classactivities/';
-    } else {
-        return '/';
-    }
-}
-
-function updateNavbarLinks(navbarHtml, basePath) {
-    // Create a temporary div to parse the HTML
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = navbarHtml;
-    
-    // Update all links
-    const links = tempDiv.querySelectorAll('a');
-    links.forEach(link => {
-        const href = link.getAttribute('href');
-        
-        // Skip if no href or if it's an external link
-        if (!href || href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:')) {
-            return;
-        }
-        
-        // If href starts with /, replace it with base path
-        if (href.startsWith('/')) {
-            const newHref = basePath + href.substring(1);
-            link.setAttribute('href', newHref);
-        } else if (href === 'index.html' || href === 'bibliography.html') {
-            // For top-level pages, add base path
-            link.setAttribute('href', basePath + href);
-        } else if (href.startsWith('resources/') || href.startsWith('bibliography.html')) {
-            // For resources and bibliography, add base path
-            link.setAttribute('href', basePath + href);
-        }
-    });
-    
-    return tempDiv.innerHTML;
 }
 
 function loadFooter() {
